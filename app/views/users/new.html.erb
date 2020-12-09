@@ -1,0 +1,20 @@
+<h1> Log in </h1>
+<%= form_with model: @user, local: true do |f| %>
+  <div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name, placeholder: 'Ingresa tu nombre', required: true %>
+	</div>
+	<div class="field">
+		<%= f.label :email %>
+		<%= f.email_field :email,  placeholder: 'Ingresa tu email', required: true %>
+	</div>
+	<div class="field">
+		<%= f.label :password %>
+		<%= f.password_field :password, placeholder: "contraseña", required: true %>
+	</div>
+  <div class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation, placeholder: "contraseña", required: true %>
+	</div>
+	<%= f.submit 'Log in' %>
+<% end %>
